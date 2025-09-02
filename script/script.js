@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.getElementById('main-content');
     const nameContainer = document.getElementById('name-container');
     const subtitleContainer = document.getElementById('subtitle-container');
+    const oabContainer = document.getElementById('oab-container');
     const loadingBar = document.getElementById('loading-bar');
 
     // --- Textos para Animação ---
-    const name = "Andreia Alves";
+    const name = "Andreia Alves dos Santos";
     const subtitle = "Advocacia";
+    const oab = "OAB 320.400";
 
     // Adiciona classe para desativar scroll durante o splash
     body.classList.add('splash-active');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Limpa os containers para garantir que estão vazios
     nameContainer.innerHTML = '';
     subtitleContainer.innerHTML = '';
+    oabContainer.innerHTML = '';
 
     // Função reutilizável para animar texto letra por letra
     const animateText = (element, text, initialDelay) => {
@@ -35,9 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameAnimationStartTime = 800;
     const nameAnimationEndTime = animateText(nameContainer, name, nameAnimationStartTime);
     const subtitleAnimationEndTime = animateText(subtitleContainer, subtitle, nameAnimationEndTime + 100);
-    
+    const oabAnimationEndTime = animateText(oabContainer, oab, subtitleAnimationEndTime + 100);
+
     // Calcula o tempo total das animações de texto e logo
-    const totalAnimationTime = Math.max(logoAnimationTime, subtitleAnimationEndTime);
+    const totalAnimationTime = Math.max(logoAnimationTime, oabAnimationEndTime);
 
     // Duração total da splash = tempo das animações + 1s de espera
     const splashDuration = totalAnimationTime + 1000; 

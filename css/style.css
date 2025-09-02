@@ -50,7 +50,7 @@ body {
 .logo {
     width: 300px;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 0.2s; /* Atraso para o logo aparecer */
@@ -69,7 +69,16 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--dourado);
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    white-space: pre;
+    letter-spacing: 1px;
+}
+
+#oab-container {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--branco);
+    margin-top: 10px;
     white-space: pre;
     letter-spacing: 1px;
 }
@@ -287,6 +296,15 @@ body {
     font-size: 2.2rem;
     color: var(--dourado);
     margin-bottom: 1.5rem;
+}
+
+.oab-display {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--branco);
+    margin-top: 8px;
+    letter-spacing: 1px;
 }
 
 .about-text p {
