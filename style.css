@@ -50,7 +50,9 @@ body {
 .logo {
     width: 300px;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    /* Este filtro CSS complexo colore o SVG para o tom de dourado. */
+    filter: invert(83%) sepia(21%) saturate(1553%) hue-rotate(354deg) brightness(88%) contrast(90%);
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 0.2s; /* Atraso para o logo aparecer */
@@ -60,18 +62,9 @@ body {
     font-size: 3rem;
     font-weight: 700;
     color: var(--dourado);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     /* Garante que os espaços em branco sejam preservados */
     white-space: pre; 
-}
-
-#subtitle-container {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--dourado);
-    margin-bottom: 30px;
-    white-space: pre;
-    letter-spacing: 1px;
 }
 
 .letter {
@@ -79,6 +72,17 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;
+}
+
+.construction-message {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--branco);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    /* Atraso para a mensagem aparecer após as animações de texto */
+    animation-delay: 3.5s; 
 }
 
 /* Animação para as letras */
@@ -93,26 +97,6 @@ body {
 @keyframes fadeIn {
     to {
         opacity: 1;
-    }
-}
-
-/* --- Barra de Carregamento --- */
-#loading-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--dourado);
-    z-index: 1000;
-}
-
-@keyframes loading-animation {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
     }
 }
 
@@ -139,6 +123,7 @@ body {
 
 .nav-logo img {
     height: 45px;
+    filter: invert(83%) sepia(21%) saturate(1553%) hue-rotate(354deg) brightness(88%) contrast(90%);
 }
 
 #nav-menu {
@@ -192,8 +177,15 @@ body {
     text-align: center;
     min-height: 60vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 5vh;
+}
+
+.hero-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -262,6 +254,10 @@ body {
 }
 
 /* --- Seção Sobre --- */
+#about {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, var(--preto) 70%);
+}
+
 .about-container {
     display: flex;
     align-items: center;
@@ -292,6 +288,10 @@ body {
 .about-text p {
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--dourado);
 }
 
 /* --- Seção Áreas de Atuação (Reestruturada) --- */
