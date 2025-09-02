@@ -1,0 +1,89 @@
+:root {
+    --dourado: #D4AF37;
+    --preto: #121212;
+    --branco: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    overflow: hidden; /* Impede barras de rolagem */
+}
+
+.splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+    /* Este filtro CSS complexo colore o SVG para o tom de dourado. */
+    filter: invert(83%) sepia(21%) saturate(1553%) hue-rotate(354deg) brightness(88%) contrast(90%);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.2s; /* Atraso para o logo aparecer */
+}
+
+#name-container {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dourado);
+    margin-bottom: 10px;
+    /* Garante que os espaços em branco sejam preservados */
+    white-space: pre; 
+}
+
+#subtitle-container {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--dourado);
+    margin-bottom: 30px;
+    white-space: pre;
+    letter-spacing: 1px;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.construction-message {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--branco);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    /* Atraso para a mensagem aparecer após as animações de texto */
+    animation-delay: 3.5s; 
+}
+
+/* Animação para as letras */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para a mensagem "em construção" */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
