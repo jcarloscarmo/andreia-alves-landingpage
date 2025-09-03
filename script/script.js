@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Textos para Animação ---
     const name = "Andreia Alves dos Santos";
     const subtitle = "Advocacia";
-    const oab = "OAB 320.400";
+    const oab = "OAB/SP 320.400";
 
     // Adiciona classe para desativar scroll durante o splash
     body.classList.add('splash-active');
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const span = document.createElement('span');
             span.classList.add('letter');
             span.innerHTML = char === ' ' ? '&nbsp;' : char;
-            span.style.animationDelay = `${initialDelay + index * 100}ms`;
+            span.style.animationDelay = `${initialDelay + index * 40}ms`;
             element.appendChild(span);
         });
-        return initialDelay + text.length * 100;
+        return initialDelay + text.length * 50;
     };
 
     // --- Inicia a Sequência de Animação ---

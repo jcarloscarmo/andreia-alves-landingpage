@@ -467,3 +467,86 @@ footer {
         right: 20px;
     }
 }
+
+/* --- Adicionar ao final do seu arquivo css/style.css --- */
+
+/* Estilos da Seção de Localização */
+.location-address {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 50%; /* Proporção 2:1 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos da Seção de Contato (Revisado) */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-alternatives {
+    text-align: center;
+    margin-top: 4rem; /* Espaço acima das alternativas */
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.contact-alternatives-title {
+    font-size: 1.2rem;
+    color: var(--dourado);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* Para quebrar linha em telas menores */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-item svg {
+    color: var(--dourado);
+}
+
+.contact-item a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--dourado);
+}
